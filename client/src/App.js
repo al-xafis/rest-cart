@@ -1,25 +1,21 @@
-import React, { Fragment} from 'react'
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Header from './components/Header';
-import NewProduct from './layouts/NewProduct';
-import Collection from './layouts/Collection';
-import BestSale from './layouts/BestSale';
-import Functionality from './components/Functionality';
-import NewLatest from './components/NewLatest';
-import Footer from './components/Footer';
-import Copyright from './components/Copyright';
+import Main from "./pages/Main";
+import Register from './pages/Register';
+import Login from './pages/Login';
+
 
 function App() {
   return (
     <Fragment>
-      <Header />
-      <NewProduct title="New Product"/>
-      <Collection />
-      <BestSale title="Best Sale"/>
-      <Functionality />
-      <NewLatest />
-      <Footer />
-      <Copyright />
+      <Router>
+        <Route exact path="/" component={Main} />
+        <Switch>
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
+        </Switch>
+      </Router>
     </Fragment>
   );
 }

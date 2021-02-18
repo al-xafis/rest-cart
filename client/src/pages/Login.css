@@ -1,0 +1,143 @@
+.login {
+  background: linear-gradient(360deg, #303435 0, #292d2d 47.83%, #151618 100%);
+  min-height: 100vh;
+}
+
+.back {
+  font-size: 2.5rem;
+  margin: 4.5rem 0 0 5.5rem;
+  color: #F6E770;
+}
+
+.register__account__container {
+  width: 90%;
+  max-width: 500px;
+  margin: 8rem auto 0;
+  text-align: center;
+}
+
+.account__title {
+  margin-bottom: 3rem;
+}
+
+.account__title h1 {
+  position: relative;
+  color: #fff;
+  font-weight: 300;
+  font-size: 4.5rem;
+  padding-bottom: 5rem;
+}
+
+.account__title h1::after {
+  position: absolute;
+  content: "";
+  width: 7rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid rgba(255,255,255,.7);
+}
+
+.account__title__icon {
+  color: #B4B5B5;
+  font-size: 5rem;
+  margin-bottom: 4rem;
+}
+
+.account__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account__input {
+  width: 100%;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.account__mail {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.account__password {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.account__passconfirm {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.account__mail__box {
+  width: 6rem;
+  background-color: #fff;
+  border-right: 2px solid #a9aaab;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #332E31;
+  font-size: 2.5rem;
+}
+
+.envelope {
+  transform: translateY(10px);
+}
+
+.lock {
+  transform: translateY(10px);
+}
+
+.classh {
+  margin-top: 1rem;
+  background-color:#efe778;
+  color: #191B1C;
+  font-weight: 400;
+  opacity: 1;
+  font-size: 2rem;
+}
+
+.classh:active {
+  transform: translateY(2px);
+}
+
+.button {
+  padding: 1rem 1.7rem;
+  border: 1px solid #fff;
+  border-radius: .5rem;
+  opacity: .75;
+  cursor: pointer;
+  transition: opacity .2s ease-out;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-family: inherit;
+  font-weight: 400;
+  outline: none;
+}
+
+.button--yel {
+  padding: 1rem 1.7rem;
+  border: 1px solid currentColor;
+  border-radius: .5rem;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity .2s ease-out;
+  color: #2c2e31 !important;
+  background-color: #f6e770;
+  text-transform: uppercase;
+}
+
+
+.button:active {
+  transform:translateY(2px);
+}
