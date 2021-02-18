@@ -6,6 +6,8 @@ import Collection from './layouts/Collection';
 import BestSale from './layouts/BestSale';
 import Functionality from './components/Functionality';
 import NewLatest from './components/NewLatest';
+import Footer from './components/Footer';
+import Copyright from './components/Copyright';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <BestSale title="Best Sale"/>
       <Functionality />
       <NewLatest />
+      <Footer />
+      <Copyright />
     </Fragment>
   );
 }
