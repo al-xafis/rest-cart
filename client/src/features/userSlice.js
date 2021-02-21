@@ -1,4 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
+import setAuthToken from '../utils/setAuthToken';
+
+// export const loadUser = async => {
+//   if (localStorage.token) {
+//     setAuthToken(localStorage.token);
+//   }
+
+//   try {
+//     const res = await axios.get('http://localhost:5000/user');
+
+    
+//   }
+// }
 
 const userSlice = createSlice({
   name: 'user',
@@ -29,13 +43,14 @@ const userSlice = createSlice({
       state.user = null;
       state.token = null;
     },
-    // loadUser(state) {
-    //   const 
-    // }
+    loadUser(state, action) {
+      state.user = action.payload
+    }
+    
   }
 });
 
-export const { register, login, logout } = userSlice.actions;
+export const { register, login, logout, loadUser } = userSlice.actions;
 
 
 export default userSlice.reducer;

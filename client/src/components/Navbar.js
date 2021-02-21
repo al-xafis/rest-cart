@@ -2,12 +2,37 @@ import React, { useEffect } from "react";
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { logout } from '../features/userSlice';
+import { logout, loadUser } from '../features/userSlice';
+import setAuthToken from "../utils/setAuthToken";
+import axios from 'axios';
 
 const Navbar = () => {
 
   const dispatch = useDispatch();
-  const user = useSelector(state => state.user.user);
+  
+  let user = null;
+  const token = null;
+
+  const fetchUser = async () => {
+
+    if (localStorage.token) {
+      setAuthToken(localStorage.token)
+    }
+
+    try {
+      const res = await axios.get('http://localhost:5000/user')
+      dispatch(loadUser(res.data));
+    } catch (err) {
+      console.error(err.message);
+    }
+
+  }
+  useEffect(() => {
+    fetchUser();
+  }, [token])
+
+  user = useSelector(state => state.user.user);
+  
 
   return (
     <div className="container">
