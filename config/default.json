@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://alhafiz:alhafiz@cluster0.rl7ln.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://alhafiz:alhafiz@cluster0.rl7ln.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "JwtSecret": "mysecret"
 }

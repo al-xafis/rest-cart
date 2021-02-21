@@ -1,13 +1,35 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { login } from '../features/userSlice';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const login = (event) => {
-    event.preventDefault();
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const onLogin = async e => {
+    e.preventDefault();
+    const body = JSON.stringify({ email, password });
+
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }
+
+      const res = await axios.post('http://localhost:5000/user/login', body, config);
+      dispatch(login(res.data));
+      history.push('/')
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   return (
@@ -27,7 +49,7 @@ const Login = () => {
             <div className="account__mail__box"><i className="fas fa-unlock lock"></i></div>
             <input type="password" className="account__input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <button type="submit" onClick={login} className="button button--yel">Login</button>
+          <button type="submit" onClick={e => onLogin(e)} className="button button--yel">Login</button>
         </form>
         
       </div>
