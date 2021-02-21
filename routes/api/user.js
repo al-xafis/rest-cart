@@ -55,7 +55,7 @@ router.post('/register', [
 
     jwt.sign(payload, config.get("JwtSecret"), { expiresIn: 36000 }, (err, token) => {
       if (err) throw err;
-      res.json({ token }) ;
+      res.json({ user: user, token: token }) ;
     })
     
   } catch (err) {

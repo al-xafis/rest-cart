@@ -27,7 +27,8 @@ const userSlice = createSlice({
       } else {
         localStorage.removeItem('token');
       }
-      state.user += action.payload;
+      state.user += action.payload.user;
+      state.token += action.payload.token;
     },
     login(state, action) {
       if (action.payload.token) {

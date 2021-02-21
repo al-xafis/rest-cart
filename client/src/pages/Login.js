@@ -40,7 +40,7 @@ const Login = () => {
           <i className="fas fa-door-open account__title__icon"></i>
           <h1>Login</h1>
         </div>
-        <form className="account__form">
+        <form className="account__form" onSubmit={e => onLogin(e)}>
           <div className="account__mail">
             <div className="account__mail__box"><i className="far fa-envelope envelope"></i></div>
             <input type="text" className="account__input" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -49,7 +49,7 @@ const Login = () => {
             <div className="account__mail__box"><i className="fas fa-unlock lock"></i></div>
             <input type="password" className="account__input" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <button type="submit" onClick={e => onLogin(e)} className="button button--yel">Login</button>
+          <button type="submit" className="button button--yel">Login</button>
         </form>
         
       </div>
