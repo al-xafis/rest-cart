@@ -11,7 +11,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   
   let user = null;
-  const token = null;
 
   const fetchUser = async () => {
 
@@ -29,7 +28,7 @@ const Navbar = () => {
   }
   useEffect(() => {
     fetchUser();
-  }, [token])
+  }, [])
 
   user = useSelector(state => state.user.user);
   
@@ -43,9 +42,9 @@ const Navbar = () => {
         <nav className="nav">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#" className="nav__link">
+              <Link to="/" className="nav__link">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav__item">
               <a href="#" className="nav__link">
@@ -85,9 +84,9 @@ const Navbar = () => {
             </a>
           </li>
           <li className="box-cart">
-            <a href="#" className="cart-icon">
+            <Link to="/cart" className="cart-icon">
               <i className="fas fa-shopping-cart"></i>
-            </a>
+            </Link>
             <div className="badge">
               <span className="orders">2</span>
             </div>

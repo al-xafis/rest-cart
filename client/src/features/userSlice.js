@@ -1,18 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
-import setAuthToken from '../utils/setAuthToken';
 
-// export const loadUser = async => {
-//   if (localStorage.token) {
-//     setAuthToken(localStorage.token);
-//   }
-
-//   try {
-//     const res = await axios.get('http://localhost:5000/user');
-
-    
-//   }
-// }
 
 const userSlice = createSlice({
   name: 'user',

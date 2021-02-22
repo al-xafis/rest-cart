@@ -26,7 +26,6 @@ const Register = () => {
           'Content-Type': 'application/json',
         }
       }
-
       const res = await axios.post('http://localhost:5000/user/register', body, config);
       dispatch(register(res.data));
       history.push('/')
