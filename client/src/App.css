@@ -587,7 +587,11 @@ body {
   font-weight: 600;
 }
 
-.cart__title {
+.cart, .stash {
+  text-align: center;
+}
+
+.cart__title, .stash__title {
   padding-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -597,7 +601,7 @@ body {
   position: relative;
 }
 
-.cart__title::after {
+.cart__title::after, .stash__title::after {
   content: "";
   display: block;
   position: absolute;
@@ -607,6 +611,20 @@ body {
   width: 6rem;
   height: .2rem;
   background-color: var(--color-primary)
+}
+
+.checkout__btn {
+  margin-top: 5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  width: 45rem;
+  height: 4rem;
+  outline: none;
+  cursor: pointer;
 }
 
 

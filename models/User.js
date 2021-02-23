@@ -13,6 +13,30 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  products: [
+    {
+      tag: {
+        type: String,
+        required: true
+      },
+      img: {
+        type: String,
+        required: true,
+      },
+      name: {
+        type: String,
+        required: true,
+      },
+      edition: {
+        type: String,
+        required: true
+      },
+      price: {
+        type: String,
+        required: true
+      }
+    }
+  ],
   date: {
     type: Date,
     default: Date.now

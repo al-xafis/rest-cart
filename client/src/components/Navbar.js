@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { logout, loadUser } from '../features/userSlice';
+import { clearProducts } from '../features/productsSlice';
 import setAuthToken from "../utils/setAuthToken";
 import axios from 'axios';
 
@@ -62,7 +63,10 @@ const Navbar = () => {
               </Link>
             </li>
             { user ? (<li className="nav__item">
-              <Link to="/" onClick={() => dispatch(logout())} className="nav__link">
+              <Link to="/" onClick={() => {
+                dispatch(logout());
+                dispatch(clearProducts());
+              }} className="nav__link">
                 Logout
               </Link>
             </li>) : (<li className="nav__item">
@@ -79,9 +83,9 @@ const Navbar = () => {
             </div>
           </li>
           <li className="box-user">
-            <a href="#" className="user-icon">
+            <Link to="/stash" className="user-icon">
               <i className="fas fa-user"></i>
-            </a>
+            </Link>
           </li>
           <li className="box-cart">
             <Link to="/cart" className="cart-icon">

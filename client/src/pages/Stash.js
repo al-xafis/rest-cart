@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import OrderedProducts from "../components/OrderedProducts";
 import { useSelector } from "react-redux";
@@ -8,30 +8,24 @@ import Copyright from '../components/Copyright';
 import axios from 'axios';
 import { nanoid } from "@reduxjs/toolkit";
 
-const Cart = () => {
+const Stash = () => {
 
-  const products = useSelector((state) => state.products);
+  const [products, setProducts] = useState([]);
 
-  const onOrder = async (e) => {
-    e.preventDefault();
-    const config = {
-      headers: {
-        "Content-Type": "application/json"
-      }
-    };
-    for(let i = 0; i < products.length; i++) {
-      await axios.post('http://localhost:5000/user/products', products[i], config);
-    }
-  }
+  useEffect(async () => {
+    const res = await axios.get("http://localhost:5000/user/products");
+    setProducts(res.data);
+  }, []);
+  
 
   return (
     <Fragment>
       <Navbar />
-      <div className="cart">
+      <div className="stash">
         <div className="container">
-          <h1 className="cart__title">Orders</h1>
+          <h1 className="stash__title">Stash - already bought items</h1>
           <div className="products">
-            {products ? (
+          {products ? (
               products.map((product) => (
                 <OrderedProducts key={nanoid()}
                   tag={product.tag}
@@ -45,7 +39,6 @@ const Cart = () => {
               <h1>No Products</h1>
             )}
           </div>
-          <button className="checkout__btn" onClick={e => onOrder(e)}>Place an Order</button>
         </div>
         <Footer />
         <Copyright />
@@ -54,4 +47,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Stash;

@@ -108,4 +108,35 @@ router.post('/login', [
   }
 });
 
+router.post('/products', auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    const newProduct = {
+    tag: req.body.tag,
+    img: req.body.img,
+    name: req.body.name,
+    edition: req.body.edition,
+    price: req.body.price,
+  } 
+
+  user.products.unshift(newProduct);
+  user.save().then(user => res.json(user));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ 'error': 'Server Error'});
+  }
+  
+});
+
+router.get('/products', auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    res.json(user.products);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send({ 'error': 'Server Error'});
+  }
+  
+});
+
 module.exports = router;
