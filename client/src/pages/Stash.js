@@ -10,13 +10,22 @@ import { nanoid } from "@reduxjs/toolkit";
 
 const Stash = () => {
 
-  const [products, setProducts] = useState([]);
+  let [products, setProducts] = useState([]);
 
   useEffect(async () => {
-    const res = await axios.get("http://localhost:5000/user/products");
-    setProducts(res.data);
+    try {
+      let res = await axios.get("http://localhost:5000/user/products");
+      if (localStorage.token) {
+        setProducts(res.data);
+      } else {
+        setProducts([]);
+      }
+        
+    } catch (err) {
+      console.error(err)
+    }
   }, []);
-  
+
 
   return (
     <Fragment>

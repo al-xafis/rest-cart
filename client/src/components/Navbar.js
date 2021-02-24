@@ -9,6 +9,8 @@ import axios from 'axios';
 
 const Navbar = () => {
 
+  let orders = useSelector(state => state.products);
+
   const dispatch = useDispatch();
   
   let user = null;
@@ -22,16 +24,23 @@ const Navbar = () => {
     try {
       const res = await axios.get('http://localhost:5000/user')
       dispatch(loadUser(res.data));
+      
     } catch (err) {
       console.error(err.message);
     }
-
   }
+
   useEffect(() => {
     fetchUser();
-  }, [])
+  }, []);
 
   user = useSelector(state => state.user.user);
+
+  if (!localStorage.token) {
+    user = null;
+  }
+  
+ 
   
 
   return (
@@ -91,9 +100,9 @@ const Navbar = () => {
             <Link to="/cart" className="cart-icon">
               <i className="fas fa-shopping-cart"></i>
             </Link>
-            <div className="badge">
-              <span className="orders">2</span>
-            </div>
+            { orders.length > 0 && <div className="badge">
+              <span className="orders">{orders.length}</span>
+            </div>}
           </li>
         </ul>
       </div>
