@@ -5,7 +5,7 @@ const userSlice = createSlice({
   name: 'user',
   initialState: {
     user: null,
-    token: null
+    token: null,
   },
   reducers: {
     register(state, action) {
@@ -14,8 +14,8 @@ const userSlice = createSlice({
       } else {
         localStorage.removeItem('token');
       }
-      state.user += action.payload.user;
-      state.token += action.payload.token;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
     },
     login(state, action) {
       if (action.payload.token) {
@@ -30,6 +30,7 @@ const userSlice = createSlice({
       localStorage.removeItem('token');
       state.user = null;
       state.token = null;
+      state.isAuthenticated = false;
     },
     loadUser(state, action) {
       state.user = action.payload
