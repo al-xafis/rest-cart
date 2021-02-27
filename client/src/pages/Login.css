@@ -9,18 +9,18 @@
   color: #F6E770;
 }
 
-.register__account__container {
+.login__account__container {
   width: 90%;
   max-width: 500px;
   margin: 8rem auto 0;
   text-align: center;
 }
 
-.account__title {
+.login__account__title {
   margin-bottom: 3rem;
 }
 
-.account__title h1 {
+.login__account__title h1 {
   position: relative;
   color: #fff;
   font-weight: 300;
@@ -28,7 +28,7 @@
   padding-bottom: 5rem;
 }
 
-.account__title h1::after {
+.login__account__title h1::after {
   position: absolute;
   content: "";
   width: 7rem;
@@ -38,20 +38,20 @@
   border-bottom: 2px solid rgba(255,255,255,.7);
 }
 
-.account__title__icon {
+.login__account__title__icon {
   color: #B4B5B5;
   font-size: 5rem;
   margin-bottom: 4rem;
 }
 
-.account__form {
+.login__account__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.account__input {
+.login__account__input {
   width: 100%;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-top-right-radius: 5px;
@@ -61,26 +61,26 @@
   font-size: 1.6rem;
 }
 
-.account__mail {
+.login__account__mail {
   display: flex;
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__password {
+.login__account__password {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__passconfirm {
+.login__account__passconfirm {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__mail__box {
+.login__account__mail__box {
   width: 6rem;
   background-color: #fff;
   border-right: 2px solid #a9aaab;
@@ -90,12 +90,12 @@
   font-size: 2.5rem;
 }
 
-.envelope {
-  transform: translateY(10px);
+.login__envelope {
+  transform: translateY(5px);
 }
 
-.lock {
-  transform: translateY(10px);
+.login__lock {
+  transform: translateY(5px);
 }
 
 .classh {
@@ -140,4 +140,60 @@
 
 .button:active {
   transform:translateY(2px);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 700px) {
+  .login {
+    height: 100%;
+  }
+
+  .login__account__container {
+    margin: 2rem auto 0;
+  }
+
+  .login__account__title h1 {
+    font-size: 2rem;
+  }
+
+  .login__account__title h1::after {
+    width: 5rem;
+    bottom: 30%;
+  }
+
+  .login__account__title__icon {
+    color: #B4B5B5;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .login__account__input {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .login__account__mail {
+    margin-bottom: 2rem;
+  }
+  
+  .login__account__password {
+    margin-bottom: 2rem;
+  }
+  
+  .login__account__passconfirm {
+    margin-bottom: 2rem;
+  }
+  
+
+  .login__envelope {
+    transform: translateY(4px);
+  }
+  
+  .login__lock {
+    transform: translateY(4px);
+  }
+
+  .button {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
 }

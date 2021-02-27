@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
         <div className="flex-container">
-          <ul className="footer__list">
+          <ul className="footer__list footer__col-1">
             <li className="footer__item">
               <a href="#" className="footer__link">Monday 11:30 am - 10:00 pm</a>
             </li>
@@ -24,16 +25,16 @@ const Footer = () => {
           </ul>
           <ul className="footer__list">
             <li className="footer__item">
-              <a href="#" className="footer__link">Login</a>
+              <Link to="/login" className="footer__link">Login</Link>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Register</a>
+              <Link to="/register" className="footer__link">Register</Link>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Cart</a>
+              <Link to="/cart" className="footer__link">Cart</Link>
             </li>
             <li className="footer__item">
-              <a href="#" className="footer__link">Contact Us</a>
+              <Link to="/contact" className="footer__link">Contact Us</Link>
             </li>
           </ul>
           <div className="footer__info">

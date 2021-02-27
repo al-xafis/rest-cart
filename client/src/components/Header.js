@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from './Navbar';
 
+
 const Header = () => {
+
+
+  
+  
+
   return (
     <header className="header">
       <Navbar />
@@ -13,7 +19,7 @@ const Header = () => {
             <div className="text__bottom">
               Up to <span className="text--red">25%</span> off
             </div>
-            <button className="text__btn">Buy now</button>
+            <button className="text__btn" id="button">Buy now</button>
           </div>
         </div>
       </div>

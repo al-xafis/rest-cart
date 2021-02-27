@@ -16,11 +16,11 @@
   text-align: center;
 }
 
-.account__title {
+.register__account__title {
   margin-bottom: 3rem;
 }
 
-.account__title h1 {
+.register__account__title h1 {
   position: relative;
   color: #fff;
   font-weight: 300;
@@ -28,7 +28,7 @@
   padding-bottom: 4rem;
 }
 
-.account__title h1::after {
+.register__account__title h1::after {
   position: absolute;
   content: "";
   width: 7rem;
@@ -38,20 +38,20 @@
   border-bottom: 2px solid rgba(255,255,255,.7);
 }
 
-.account__title__icon {
+.register__account__title__icon {
   color: #B4B5B5;
   font-size: 5rem;
   margin-bottom: 2rem;
 }
 
-.account__form {
+.register__account__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.account__input {
+.register__account__input {
   width: 100%;
   padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   border-top-right-radius: 5px;
@@ -61,26 +61,26 @@
   font-size: 1.6rem;
 }
 
-.account__mail {
+.register__account__mail {
   display: flex;
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__password {
+.register__account__password {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__passconfirm {
+.register__account__passconfirm {
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
 }
 
-.account__mail__box {
+.register__account__mail__box {
   width: 6rem;
   background-color: #fff;
   border-right: 2px solid #a9aaab;
@@ -126,4 +126,61 @@
 
 .button:active {
   transform:translateY(2px);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 700px){
+  .register {
+    height: 100%;
+  }
+
+  .register__account__container {
+    margin: 2rem auto 0;
+  }
+
+  .register__account__title h1 {
+    font-size: 2rem;
+  }
+
+  .register__account__title h1::after {
+    width: 5rem;
+    bottom: 30%;
+  }
+
+  .register__account__title__icon {
+    color: #B4B5B5;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .register__account__input {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .register__account__mail {
+    margin-bottom: 2rem;
+  }
+  
+  .register__account__password {
+    margin-bottom: 2rem;
+  }
+  
+  .register__account__passconfirm {
+    margin-bottom: 2rem;
+  }
+  
+
+  .register__envelope {
+    transform: translateY(4px);
+  }
+  
+  .register__lock {
+    transform: translateY(4px);
+  }
+
+  .button {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
 }

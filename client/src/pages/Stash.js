@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import OrderedProducts from "../components/OrderedProducts";
+import StashedProducts from "../components/StashedProducts";
 import { useSelector } from "react-redux";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
@@ -37,7 +37,7 @@ const Stash = () => {
             <div className="products">
               {products ? (
                 products.map((product) => (
-                  <OrderedProducts
+                  <StashedProducts
                     key={nanoid()}
                     tag={product.tag}
                     img={product.img}

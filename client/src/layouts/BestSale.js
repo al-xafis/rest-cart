@@ -6,7 +6,7 @@ const BestSale = ({ title }) => {
   return (
     <section className="newproduct">
       <div className="container">
-        <h1 className="newproduct__title">{title}</h1>
+        <h1 className="newproduct__title" id="target">{title}</h1>
         <BestSaleProducts />
       </div>
     </section>

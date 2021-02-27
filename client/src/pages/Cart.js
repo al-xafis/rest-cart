@@ -10,7 +10,7 @@ import { nanoid } from "@reduxjs/toolkit";
 
 const Cart = () => {
 
-  const products = useSelector((state) => state.products);
+  const products = useSelector((state) => state.products.products);
   const user = useSelector((state) => state.user.user);
   const history = useHistory();
 
@@ -43,6 +43,7 @@ const Cart = () => {
                     name={product.name}
                     edition={product.edition}
                     price={product.price}
+                    id={product.id}
                   />
                 ))
                 
@@ -60,7 +61,7 @@ const Cart = () => {
     return (
       <Fragment>
         <Navbar />
-        <div className="cart">
+        <dfiv className="cart">
           <div className="container">
             <h1 className="cart__title__login">Please Login</h1>
             <div className="products">
@@ -68,7 +69,7 @@ const Cart = () => {
           </div>
           <Footer />
           <Copyright />
-        </div>
+        </dfiv>
       </Fragment>
     )
   };
