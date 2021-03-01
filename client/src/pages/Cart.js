@@ -61,7 +61,7 @@ const Cart = () => {
     return (
       <Fragment>
         <Navbar />
-        <dfiv className="cart">
+        <div className="cart">
           <div className="container">
             <h1 className="cart__title__login">Please Login</h1>
             <div className="products">
@@ -69,7 +69,7 @@ const Cart = () => {
           </div>
           <Footer />
           <Copyright />
-        </dfiv>
+        </div>
       </Fragment>
     )
   };

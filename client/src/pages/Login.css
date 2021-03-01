@@ -147,6 +147,10 @@
     height: 100%;
   }
 
+  .back {
+    margin: 3rem 1rem 1rem 2rem;
+  }
+
   .login__account__container {
     margin: 2rem auto 0;
   }

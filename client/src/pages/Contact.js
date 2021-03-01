@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d95901.41990287435!2d69.3108736!3d41.3106176!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1614258831245!5m2!1sen!2s" width="1200" height="450" style={{border:0}} allowfullscreen="true" loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d95901.41990287435!2d69.3108736!3d41.3106176!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1614258831245!5m2!1sen!2s" width="1200" height="450" style={{border:0}} allowFullScreen={true} loading="lazy"></iframe>
         </div>
         <h2 className="contact__touch">Send Us Email</h2>
         <form action="" className="contact__form">

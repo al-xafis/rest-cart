@@ -26,6 +26,7 @@ body {
 .container {
   max-width: 115rem;
   margin: 0 auto;
+  position: relative;
 }
 
 /* ######### HEADER ########## */
@@ -35,29 +36,46 @@ body {
 }
 
 .navbar {
-  margin: 2.3rem 0;
+  width: 100vw;
+  height: 8rem;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+}
+
+.container__navbar {
+  margin: auto;
+  width: 115rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+
+
 .navbar--phone {
   display: none;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
-  .container {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
+  .container__navbar {
     max-width: 100vw;
     margin: 0 10px;
-  }
-  .navbar {
     display: none;
   }
+  .navbar {
+    display: block;
+  }
   .navbar--phone {
-    height: 6rem;
+    padding: 0 10px;
+    height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 999;
   }
 
   .toggle-button {
@@ -80,6 +98,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
   }
 
   .nav__item {
@@ -219,7 +238,7 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
  .hero__box {
     top: 50%;
     left: 50%;
@@ -301,7 +320,7 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .newproduct__title, .contact__touch {
     margin-bottom: 1rem;
 }}
@@ -401,7 +420,7 @@ body {
   transition: all .4s;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .products {
     margin-top: 3rem;
     flex-direction: column;
@@ -479,7 +498,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .collection {
     background-position-y: 2%;
     background-position-x: 30%;
@@ -518,7 +537,7 @@ body {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .functions {
     display: flex;
     flex-direction: column;
@@ -626,7 +645,7 @@ body {
   width: 300px;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .newlatest {
     margin-top: 3rem;
   }
@@ -691,11 +710,12 @@ body {
   margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .footer__col-1 {
     display: none;
   }
   .footer {
+    padding: 4rem 10px;
     margin-top: 3rem;
   }
 
@@ -762,7 +782,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .checkout__btn {
     width: 20rem;
   }
@@ -811,7 +831,7 @@ body {
   color: #6e6e6e;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .blog__strip, .contact__strip {
     all: unset;
     margin-top: 2rem;
@@ -952,7 +972,7 @@ body {
   outline: none
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .contact__title {
     display: none;
   }
@@ -1015,7 +1035,7 @@ body {
   color: #353535;
 }
 
-@media only screen and (max-width: 700px) and (min-width: 375px) {
+@media only screen and (max-width: 700px) and (min-width: 300px) {
   .cart .footer {
     margin-top: 15rem;
   }

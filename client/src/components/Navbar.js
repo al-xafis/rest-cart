@@ -22,8 +22,10 @@ const Navbar = () => {
     }
 
     try {
+      if (localStorage.token) {
       const res = await axios.get("http://localhost:5000/user");
       dispatch(loadUser(res.data));
+      }
     } catch (err) {
       console.error(err.message);
     }
@@ -40,8 +42,8 @@ const Navbar = () => {
   }
 
   return (
-    <div className="container">
-      <div className="navbar">
+    <div className="navbar">
+      <div className="container__navbar">
         <div className="logo">
           <Link to="/" className="go__home">
             Zo<span className="logo--red">tac.</span>

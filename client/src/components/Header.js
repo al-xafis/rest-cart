@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import Navbar from './Navbar';
 
 
@@ -9,8 +9,10 @@ const Header = () => {
   
 
   return (
+    <Fragment>
+    <Navbar />
     <header className="header">
-      <Navbar />
+      
       <div className="hero">
         <div className="hero__img">
           <div className="hero__box">
@@ -24,6 +26,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </Fragment>
   );
 };
 
