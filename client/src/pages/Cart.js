@@ -22,7 +22,7 @@ const Cart = () => {
       }
     };
     for(let i = 0; i < products.length; i++) {
-      await axios.post('http://localhost:5000/user/products', products[i], config);
+      await axios.post('/user/products', products[i], config);
     }
     history.push('/');
   }

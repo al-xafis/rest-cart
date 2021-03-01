@@ -23,7 +23,7 @@ const Navbar = () => {
 
     try {
       if (localStorage.token) {
-      const res = await axios.get("http://localhost:5000/user");
+      const res = await axios.get("/user");
       dispatch(loadUser(res.data));
       }
     } catch (err) {
