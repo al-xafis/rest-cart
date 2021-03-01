@@ -49,6 +49,7 @@ body {
 .container__navbar {
   margin: auto;
   width: 115rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
