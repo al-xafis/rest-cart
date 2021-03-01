@@ -24,7 +24,7 @@ const Login = () => {
         }
       }
 
-      const res = await axios.post('http://localhost:5000/user/login', body, config);
+      const res = await axios.post('/user/login', body, config);
       dispatch(login(res.data));
       history.push('/')
     } catch (e) {
