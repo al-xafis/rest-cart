@@ -15,7 +15,7 @@ const Stash = () => {
   useEffect(async () => {
     try {
       if (user) {
-        let res = await axios.get("http://localhost:5000/user/products");
+        let res = await axios.get("/user/products");
         if (localStorage.token) {
           setProducts(res.data);
         } else {
